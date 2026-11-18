@@ -23,8 +23,10 @@ const PLAYER_ROLES = [
   { id: '34', label: 'Trois-Quarts (¾)', shortLabel: 'Trois-Quarts', group: 'Trois-quarts' },
 ];
 
-const RcaCrestBadge = ({ size = 40, customLogo }) => {
-  if (customLogo) {
+const RcaCrestBadge = (
+  { size = 40, customLogo }: { size?: number; customLogo?: string }
+) => {
+if (customLogo) {
     return (
       <img
         src={customLogo}
